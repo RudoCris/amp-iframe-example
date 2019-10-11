@@ -51,24 +51,24 @@
       unde.</p>
   </div>
   
-  <amp-ad width=300 height=250 type="custom" layout="responsive" data-url="https://rudmanusachi.github.io/custom-amp-ad/no-ad.json" data-foo-bar="hello">
+  <amp-ad width=300 height=250 type="custom" layout="responsive" data-url="https://rudmanusachi.github.io/custom-amp-ad/no-ad-iframe.json" data-foo-bar="hello">
     <div fallback>No ad for you</div>
       <template type="amp-mustache" id="amp-template-id">
-        {{#pics}}
+        {{#ads}}
         <amp-iframe width="300" 
                 height="250" 
                 sandbox="allow-scripts allow-same-origin allow-popups" 
                 layout="responsive" 
                 resizable
                 frameborder="0"
-                src="https://rudmanusachi.github.io/amp-iframe-mediator/">
-      <amp-img layout="fill" src="https://i.vimeocdn.com/video/536538454_640.webp" placeholder></amp-img>
-      <div overflow
-        tabindex="0"
-        role="button"
-        aria-label="Show more">Click to show more</div>
-    </amp-iframe>
-        {{/pics}}
+                src="{{src}}">
+          <amp-img layout="fill" src="https://i.vimeocdn.com/video/536538454_640.webp" placeholder></amp-img>
+          <div overflow
+            tabindex="0"
+            role="button"
+            aria-label="Show more">Click to show more</div>
+        </amp-iframe>
+        {{/ads}}
       </template>
   </amp-ad>
     <div class="container">
